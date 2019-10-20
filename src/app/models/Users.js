@@ -26,7 +26,6 @@ class User extends Model {
   }
 
   async checkPassword(password) {
-    console.log(await bcrypt.hash(password, 8));
     return bcrypt.compare(password, this.password_hash);
   }
 }
